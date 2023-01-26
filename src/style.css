@@ -5,9 +5,35 @@
 
 .header {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(142, 195, 248);
+}
+
+.header-buttons {
+    display: flex;
     justify-content: center;
-    gap: 75px;
+    align-items: stretch;
     font-size: 30px;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+button {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Courier New', monospace;
+}
+
+#gymbro-img {
+    mix-blend-mode: multiply;
+    height: 200px;
+    width: auto;
 }

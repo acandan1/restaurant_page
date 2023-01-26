@@ -17,6 +17,19 @@ function loadPage() {
     const header = document.createElement("div");
     header.className = "header";
 
+    const headerButtons = document.createElement("div");
+    headerButtons.className = "header-buttons";
+
+    const restaurantHeader = document.createElement("div");
+    restaurantHeader.className = "header-icon";
+
+    const restaurantName = document.createElement("h1");
+    restaurantName.innerHTML = "Gym Bro Restaurant";
+
+    const restaurantImage = document.createElement("img");
+    restaurantImage.src = "../src/media/gymbro.png";
+    restaurantImage.id = "gymbro-img";
+
     const homeButton = document.createElement("button");
     homeButton.innerHTML = "Home";
     homeButton.addEventListener('click', (event) => {
@@ -33,9 +46,14 @@ function loadPage() {
         openTab("about");
     });
 
-    header.appendChild(homeButton);
-    header.appendChild(menuButton);
-    header.appendChild(aboutButton);
+    restaurantHeader.appendChild(restaurantName);
+    restaurantHeader.appendChild(restaurantImage);
+    header.appendChild(restaurantHeader);
+
+    headerButtons.appendChild(homeButton);
+    headerButtons.appendChild(menuButton);
+    headerButtons.appendChild(aboutButton);
+    header.appendChild(headerButtons);
 
     content.appendChild(header)
 
